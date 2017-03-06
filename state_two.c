@@ -16,7 +16,8 @@ void stop_state_two(void);
 static struct state_t internal_state = {
     .start = start_state_two,
     .during = during_state_two,
-    .stop = stop_state_two
+    .stop = stop_state_two,
+    .name = "TWO"
 };
 
 state_t state_two = &internal_state;
@@ -37,8 +38,6 @@ static uint8_t i = 0;
 
 void start_state_two(void)
 {
-    printf("Start state_two !\n");
-
     i = 0;
 }
 
@@ -46,8 +45,6 @@ state_t during_state_two(void)
 {
     state_t next_state = state_two;
 
-    printf("During state_two...\n");
-    
     if( i++ == 5 )
         next_state = state_one;
 
@@ -56,5 +53,5 @@ state_t during_state_two(void)
 
 void stop_state_two(void)
 {
-    printf("Stop state_two !\n");
+
 }
