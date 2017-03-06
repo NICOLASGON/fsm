@@ -6,9 +6,9 @@
 static state_t actual_state;
 static state_t next_state;
 
-static hook start_hook;
-static hook during_hook;
-static hook stop_hook;
+static hook start_hook = NULL;
+static hook during_hook = NULL;
+static hook stop_hook = NULL;
 
 void fsm_init(void)
 {
