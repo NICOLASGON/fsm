@@ -1,7 +1,7 @@
 #ifndef __FSM_H__
 #define __FSM_H__
 
-#define MAX_SIZE_STATE_NAME
+#define MAX_SIZE_STATE_NAME 50
 
 typedef struct state_t *state_t;
 struct state_t {
