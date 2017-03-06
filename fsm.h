@@ -15,4 +15,10 @@ struct state_t {
 void fsm_init(void);
 void fsm_run(void);
 
+typedef void (*hook)(state_t state);
+
+void fsm_register_start_hook(hook h);
+void fsm_register_during_hook(hook h);
+void fsm_register_stop_hook(hook h);
+
 #endif
