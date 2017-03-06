@@ -12,4 +12,7 @@ struct state_t {
     char name[MAX_SIZE_STATE_NAME];
 };
 
+void fsm_init(void);
+void fsm_run(void);
+
 #endif
